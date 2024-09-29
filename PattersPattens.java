@@ -173,21 +173,127 @@ public class PattersPattens {
     }
      public static void patterns17(int n){
 
+        for(int i = 0; i< n; i++){
+            int stop = (2*i-1)/2;
+            for(int j = 0 ; j< n-i-1; j++){
+                System.out.print(" ");
+
+            }
+            char ch = 'A';
+            for(int j = 0; j<(2*i+1); j++){
+                System.out.print(ch);
+                if(j<= stop){
+                    ch++;
+                }
+                else{
+                    ch--;
+                }
+            }
+            for(int j = 0 ; j< n-i-1; j++){
+                System.out.print(" ");
+
+            }
+            System.out.println();
+
+
+        }
     }
      public static void patterns18(int n){
-
+            for(int i = 0; i<n; i++){
+                for(char ch = (char) ('E'-i); ch<='E'; ch++){//casting to char
+                    System.out.print(ch);
+                }
+                System.out.println();
+            }
     }
      public static void patterns19(int n){
+        int insp =0;
+            for(int i = 0; i<n; i++){
+                for(int j = 1; j <= n-i; j++){
+                    System.out.print("*");
+                }
 
+                for(int j = 0; j<insp; j++){
+                    System.out.print(" ");
+                }
+                for(int j = 1; j <= n-i; j++){
+                    System.out.print("*");
+                }
+                insp+=2;
+                System.out.println();
+            }
+            insp = 2*n-2;
+            for(int i = 1; i<=n; i++){
+
+                for(int j = 1; j<=i; j++){
+                    System.out.print("*");
+                }
+                for(int j = 0; j< insp; j++){
+                    System.out.print(" ");
+                }
+                for(int j = 1; j<=i; j++){
+                    System.out.print("*");
+                }
+                insp-=2;
+                System.out.println();
+            }
     }
      public static void patterns20(int n){
 
+        int insp = 2*n-2;
+        for(int i = 1; i<=2*n-1; i++){
+            int stars = i;
+            if(i>n){
+                stars = (2*n-i);
+            }
+            for(int j = 1; j<=stars; j++){
+                System.out.print("*");
+            }
+            for(int j = 1; j<=insp; j++){
+                System.out.print(" ");
+            }
+            for(int j = 1; j<=stars; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+            if(i<n){
+                insp -=2;
+            }
+            else{
+                insp+=2;
+            }
+
+        }
     }
      public static void patterns21(int n){
 
+        for(int i =0; i<n; i++ ){
+            for(int j = 0; j<n; j++){
+                if(i==0 || j==0 || i==n-1 || j==n-1){
+                    System.out.print("*");
+                }
+                else{
+                    System.out.print(" ");
+                }
+
+            }
+            System.out.println();
+         }
     }
+
+    //wrong code submit your ans
      public static void patterns22(int n){
 
+        for(int i  = 0; i<2*n-1; i++ ){
+            for(int j = 0; j<2*n-1; j++){
+                int top =i;
+                int  left = j;
+                int right = (2*n-2)-j;
+                int bottom = (2*n+2)-i;
+                System.out.print(n-Math.min(top,bottom)+" "+Math.min(left,right));
+            }
+            System.out.println();
+        }
     }
 
     public static void main(String[] args) {
