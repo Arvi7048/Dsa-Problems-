@@ -281,7 +281,8 @@ public class PattersPattens {
          }
     }
 
-    //wrong code submit your ans
+    //wrong code 
+    submit your ans
      public static void patterns22(int n){
 
         for(int i  = 0; i<2*n-1; i++ ){
